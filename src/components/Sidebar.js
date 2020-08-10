@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import CreateIcon from '@material-ui/icons/Create';
 import InsertCommentIcon from '@material-ui/icons/InsertComment';
@@ -11,8 +11,12 @@ import AppsIcon from '@material-ui/icons/Apps';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AddIcon from '@material-ui/icons/Add';
+import './Sidebar.css'
 
 function Sidebar() {
+    const [channels, setChannels] = useState([])
+
     return (
         <div className="sidebar">
             <div className="sidebar__header">
@@ -24,18 +28,19 @@ function Sidebar() {
                     </h3>
                 </div>
                 <CreateIcon/>
-                <SidebarOption Icon={InsertCommentIcon} title="Threads" />
-                <SidebarOption Icon={InboxIcon} title="Threads" />
-                <SidebarOption Icon={DraftsIcon} title="Threads" />
-                <SidebarOption Icon={BookmarkBorderIcon} title="Threads" />
-                <SidebarOption Icon={PeopleAltIcon} title="Threads" />
-                <SidebarOption Icon={AppsIcon} title="Threads" />
-                <SidebarOption Icon={FileCopyIcon} title="Threads" />
-                <SidebarOption Icon={ExpandLessIcon} title="Threads" />
-                <hr/>
-                <SidebarOption Icon={ExpandMoreIcon} title="Threads" />
-                <hr/>
             </div>
+            <SidebarOption Icon={InsertCommentIcon} title="Threads" />
+            <SidebarOption Icon={InboxIcon} title="Mentions" />
+            <SidebarOption Icon={DraftsIcon} title="Saved Items" />
+            <SidebarOption Icon={BookmarkBorderIcon} title="Channel Browser" />
+            <SidebarOption Icon={PeopleAltIcon} title="People" />
+            <SidebarOption Icon={AppsIcon} title="Apps" />
+            <SidebarOption Icon={FileCopyIcon} title="File Browser" />
+            <SidebarOption Icon={ExpandLessIcon} title="Show Less" />
+            <hr/>
+            <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
+            <hr/>
+            <SidebarOption Icon={AddIcon} title="Add Channel"/>
         </div>
     )
 }

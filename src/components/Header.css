@@ -4,7 +4,7 @@
     justify-content: space-between;
     padding: 10px 0;
     background-color: var(--slack-color);
-    color: wheat;
+    color: white;
 }
 
 .header__left {
@@ -27,18 +27,20 @@
     padding: 0 50px;
     color: gray;
     border: 1px gray solid;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .header__search > input {
     background-color: transparent;
     border: none;
     text-align: center;
-    min-width: 35vw;
+    min-width: 30vw;
 }
 
 .header__right {
     flex: 0.3;
+    display: flex;
+    align-items: flex-end;
 }
 
 .header__right > .MuiSvgIcon-root{

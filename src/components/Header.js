@@ -3,25 +3,26 @@
  import AccessTimeIcon from '@material-ui/icons/AccessTime'; 
  import SearchIcon from "@material-ui/icons/Search"
  import HelpOutlineIcon from "@material-ui/icons/HelpOutline"
+import './Header.css'
 
  function Header() {
      return (
          <div className="header">
-            <div className="header_left">
+            <div className="header__left">
                 <Avatar
-                className="header_avatar"
-                alt="Kamil"
-                src=""
+                    className="header__avatar"
+                    alt="Kamil"
+                    src=""
                 />
                 <AccessTimeIcon/>
             </div>
 
-            <div className="header_search">
+            <div className="header__search">
                 <SearchIcon/>
-                <input placeholder="?"/>
+                <input placeholder="Search"/>
             </div>
 
-            <div className="header_right">
+            <div className="header__right">
                 <HelpOutlineIcon/>
             </div>
          </div>
