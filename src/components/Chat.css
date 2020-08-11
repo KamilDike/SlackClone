@@ -20,9 +20,8 @@
 }
 
 .chat__headerRight > p > .MuiSvgIcon-root{
-    display: flex;
-    align-items: center;
-    font-size: 14px;
+    margin-right: 5px !important;
+    font-size: 16px;
 }
 
 .chat__channelName {
