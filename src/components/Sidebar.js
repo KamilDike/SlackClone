@@ -14,9 +14,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import './Sidebar.css'
 import db from '../firebase';
+import { useStateValue } from '../StateProvider';
 
 function Sidebar() {
     const [channels, setChannels] = useState([])
+    const [{ user }] = useStateValue();
 
     useEffect(() => {
         db.collection('rooms').onSnapshot(snapshot => (
@@ -35,15 +37,15 @@ function Sidebar() {
         <div className="sidebar">
             <div className="sidebar__header">
                 <div className="sidebar__info">
-                    <h2>Kamil Dike</h2>
+                    {/* <h2>slack</h2> */}
                     <h3>
                         <FiberManualRecordIcon />
-                        Kotaro
+                        {user?.displayName}
                     </h3>
                 </div>
                 <CreateIcon/>
             </div>
-            <SidebarOption Icon={InsertCommentIcon} title="Threads" />
+            {/* <SidebarOption Icon={InsertCommentIcon} title="Threads" />
             <SidebarOption Icon={InboxIcon} title="Mentions" />
             <SidebarOption Icon={DraftsIcon} title="Saved Items" />
             <SidebarOption Icon={BookmarkBorderIcon} title="Channel Browser" />
@@ -51,7 +53,7 @@ function Sidebar() {
             <SidebarOption Icon={AppsIcon} title="Apps" />
             <SidebarOption Icon={FileCopyIcon} title="File Browser" />
             <SidebarOption Icon={ExpandLessIcon} title="Show Less" />
-            <hr/>
+            <hr/> */}
             <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
             <hr/>
             <SidebarOption Icon={AddIcon} title="Add Channel" addChannelOption/>

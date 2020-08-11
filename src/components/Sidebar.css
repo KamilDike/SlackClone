@@ -40,8 +40,9 @@
 .sidebar__info > h3 {
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
+    padding:8px;
 }
 
 .sidebar__info > h3 > .MuiSvgIcon-root {
