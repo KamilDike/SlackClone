@@ -1,0 +1,10 @@
+.login__container {
+    object-fit: contain;
+    height: 100px;
+    margin-bottom: 40px;
+    background-color: bisque;
+}
+
+.login {
+    align-items: center;
+}
