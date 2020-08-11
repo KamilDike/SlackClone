@@ -3,6 +3,13 @@
     border-top: 1px solid #49274b;
     max-width: 260px;
     color: white;
+    flex: 0.3;
+}
+
+.sidebar > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #49274b
 }
 
 .sidebar__header {
@@ -17,7 +24,7 @@
     color: #49274b;
     font-size: 18px;
     background-color: white;
-    border-radius: 999PX;
+    border-radius: 999px;
 }
 
 .sidebar__info {
